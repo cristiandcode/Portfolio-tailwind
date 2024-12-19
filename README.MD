@@ -1,3 +1,3 @@
 # PORTFOLIO
 
-<h2>Portfolio desarrollado en tailwind, diseñado por el programador Diaz Cristian</h2>
+<h2>Portfolio en progreso desarrollado en tailwind, diseñado por el programador Diaz Cristian</h2>

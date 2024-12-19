@@ -3,6 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
+    <link rel="icon" href="./public/favicon.ico">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta author="Cristian Diaz">
     <meta name="description" content="Portfolio diseñado por el programador y desarrollador de software Cristian Diaz">
@@ -12,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
 </head>
 
 <body class="font-dm-sans bg-color-brackgroud text-white">
@@ -62,8 +64,10 @@
 
                     <div
                         class="grid grid-cols[repeat(auto-fit,minmax(170px,1fr))] auto-rows-[60px] gap-8 max-w-lg mx-auto md:mx-0">
-                        <a href="#" class="bg-green-color flex items-center justify-center">Descargar CV</a>
-                        <a href="#" class=" flex items-center justify-center border-white border">Ver mas </a>
+                        <a class="bg-green-color flex items-center justify-center" href="CristianCodeCv.pdf"
+                            download="CristianCodeCv.pdf">Descargar CV</a>
+                        <a href="#servicioss" class=" flex items-center justify-center border-white border"
+                            id="servicioss">Ver mas </a>
                     </div>
                 </article>
             </section>
@@ -102,7 +106,7 @@
                             </svg>
                         </div>
                         <h3 class="text-2xl mt-4 mb-2">Github</h3>
-                        <a href="#" class="font-light">cristiandcode</a>
+                        <a href="https://github.com/cristiandcode" class="font-light border-b">cristiandcode</a>
                     </article>
                     <article class="w-max grid justify-items-center">
                         <div class="icons-container">
@@ -114,7 +118,8 @@
                             </svg>
                         </div>
                         <h3 class="text-2xl mt-4 mb-2">Linkedin</h3>
-                        <a href="#" class="font-light">@cristiandcode</a>
+                        <a href="https://www.linkedin.com/in/cristiandcode/"
+                            class="font-light border-b">cristiandcode</a>
                     </article>
 
                 </div>
@@ -200,19 +205,25 @@
             <section class="py-16">
                 <h2 class="text-4xl mb-16 text-center md:text-5xl" id="contactame">Contacto</h2>
 
-                <form class="flex flex-wrap justify-between gap-8 px-1 max-w-screen-lg mx-auto">
+                <form action="https://formsubmit.co/diazcristian0210@gmail.com" method="POST"
+                    class="flex flex-wrap justify-between gap-8 px-1 max-w-screen-lg mx-auto">
 
-                    <input type="text" class="border-b px-2 py-4 flex-grow basis-60 focus-input" placeholder="Nombre">
+                    <input type="text" class="border-b px-2 py-4 flex-grow basis-60 focus-input" placeholder="Nombre"
+                        name="name">
 
-                    <input type="email" class="border-b px-2 py-4 flex-grow basis-60 focus-input " placeholder="Email">
+                    <input type="email" class="border-b px-2 py-4 flex-grow basis-60 focus-input " placeholder="Email"
+                        name="email">
 
-                    <textarea placeholder="Mensaje"
+                    <textarea placeholder="Mensaje" name="Comentario"
                         class="border px-4 py-6 min-w-full max-w-full w-full min-h-[100px] max-h-60 focus-input"></textarea>
 
                     <input type="submit" value="Contactame" class="bg-green-color py-4 px-14 mx-auto cursor-pointer">
 
-                </form>
+                    <input type="hidden" name="_next" value="http://127.0.0.1:5500/src/">
+                    <!--Esto nos envia a la pagina nuevamente-->
 
+                    <input type="hidden" name="_captcha" value="false">
+                </form>
             </section>
 
         </main>
